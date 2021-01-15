@@ -1,0 +1,17 @@
+<div class='col-md-4'>
+<div class="card m-2 p-2" style="width: 18rem;">
+    <img  width="100px" heigth="100px" alt="flag" class="rounded-circle" src="{{country.flag}}">
+        <div  class="card-body">
+            <h5  class="card-title">
+            {{country.name}}</h5>
+            <p class="card-text"> {{country.nativeName}} </p>
+            <button
+              (click)="getDetail()"
+              class="btn btn-link">
+              More Details
+            </button>
+           
+       
+    </div>
+</div>
+</div>

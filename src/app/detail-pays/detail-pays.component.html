@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center" >
+    <div class="col-lg-8 push-lg-4" *ngFor ="let c of country">
+      <div class="tab-content p-b-3">
+        <div class="tab-pane active" >
+
+          <h4 class="m-y-2"> {{c.name}} {{c.nativeName}}</h4>
+          <div class="d-flex justify-content-center">
+            <img width="150px" height="150px" class="rounded-circle align-content-center"
+             src="{{c.flag}}" alt="{{c.name}}">
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="m-t-2"><span class="fa fa-clock-o ion-clock pull-xs-right"></span> Informations</h4>
+              <table class="table table-hover table-striped">
+                <tbody>
+                <tr>
+                  <td>
+                    <strong>Name</strong> {{c?.name}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Capital</strong> {{c.capital}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Region</strong> {{c.region}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Population</strong> {{c.population}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Area</strong> {{c.area}}
+                  </td>
+                </tr>
+               
+                <tr>
+                    <td>
+                      <strong>Languages</strong> 
+                      <span *ngFor="let language of c.languages">
+                        {{language.name}} {{language.nativeName}}
+                      </span>
+                    </td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  
